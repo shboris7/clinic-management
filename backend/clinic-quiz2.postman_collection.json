@@ -1,0 +1,1223 @@
+{
+  "info": {
+    "_postman_id": "bbb0c6ac-00d0-4619-9d7d-ca0c48fd562e",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58715649",
+    "_collection_link": "https://go.postman.co/collection/58715649-bbb0c6ac-00d0-4619-9d7d-ca0c48fd562e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "A1 : Add Specialization",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"name\": \"Third Office\", \"officeNumber\": \"103\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/doctors/df701fd1-98d1-4515-8358-30e4b5763e1e/specializations/5ff13393-b691-4e6d-80db-3df9bb272a98",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "doctors",
+            "df701fd1-98d1-4515-8358-30e4b5763e1e",
+            "specializations",
+            "5ff13393-b691-4e6d-80db-3df9bb272a98"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A2: Remove Specialization",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"name\": \"Third Office\", \"officeNumber\": \"103\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/doctors/df701fd1-98d1-4515-8358-30e4b5763e1e/specializations/5ff13393-b691-4e6d-80db-3df9bb272a98",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "doctors",
+            "df701fd1-98d1-4515-8358-30e4b5763e1e",
+            "specializations",
+            "5ff13393-b691-4e6d-80db-3df9bb272a98"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A3: Free Offices",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"name\": \"Third Office\", \"officeNumber\": \"103\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/offices/free",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "offices",
+            "free"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "A4: Move Doctor to Office",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"name\": \"Third Office\", \"officeNumber\": \"103\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/doctors/df701fd1-98d1-4515-8358-30e4b5763e1e/office?officeNumber=104",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "doctors",
+            "df701fd1-98d1-4515-8358-30e4b5763e1e",
+            "office"
+          ],
+          "query": [
+            {
+              "key": "officeNumber",
+              "value": "104",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B1: Safe Booking (Success)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"appointmentDate\": \"2026-10-25\",\r\n    \"reason\": \"General checkup\",\r\n    \"patient\": { \"id\": \"67a5cd60-693b-4510-8f8d-f575026ff788\" },\r\n    \"doctor\": { \"id\": \"df701fd1-98d1-4515-8358-30e4b5763e1e\" }\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/appointments/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "appointments",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B1: Safe Booking (Error)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"appointmentDate\": \"2020-10-25\",\r\n    \"reason\": \"General checkup\",\r\n    \"patient\": { \"id\": \"67a5cd60-693b-4510-8f8d-f575026ff788\" },\r\n    \"doctor\": { \"id\": \"df701fd1-98d1-4515-8358-30e4b5763e1e\" }\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/appointments/save",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "appointments",
+            "save"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2 Status Flow (Success)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"appointmentDate\": \"2026-10-25\",\r\n    \"reason\": \"General checkup\",\r\n    \"patient\": { \"id\": \"67a5cd60-693b-4510-8f8d-f575026ff788\" },\r\n    \"doctor\": { \"id\": \"df701fd1-98d1-4515-8358-30e4b5763e1e\" }\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/appointments/b4af11a4-821a-45b7-bb84-71351b772168/status?status=CONFIRMED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "appointments",
+            "b4af11a4-821a-45b7-bb84-71351b772168",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "CONFIRMED",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B2: Status Flow (Error)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"appointmentDate\": \"2026-10-25\",\r\n    \"reason\": \"General checkup\",\r\n    \"patient\": { \"id\": \"67a5cd60-693b-4510-8f8d-f575026ff788\" },\r\n    \"doctor\": { \"id\": \"df701fd1-98d1-4515-8358-30e4b5763e1e\" }\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/appointments/6012214e-a600-44b7-aa67-b2c63ffbbf17/status?status=SCHEDULED",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "appointments",
+            "6012214e-a600-44b7-aa67-b2c63ffbbf17",
+            "status"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "SCHEDULED",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B3: Reschedule (Success)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"appointmentDate\": \"2026-10-25\",\r\n    \"reason\": \"General checkup\",\r\n    \"patient\": { \"id\": \"67a5cd60-693b-4510-8f8d-f575026ff788\" },\r\n    \"doctor\": { \"id\": \"df701fd1-98d1-4515-8358-30e4b5763e1e\" }\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/appointments/b4af11a4-821a-45b7-bb84-71351b772168/reschedule?newDate=2026-10-28",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "appointments",
+            "b4af11a4-821a-45b7-bb84-71351b772168",
+            "reschedule"
+          ],
+          "query": [
+            {
+              "key": "newDate",
+              "value": "2026-10-28",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "B3: Reschedule (Error)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "  {\r\n    \"appointmentDate\": \"2026-10-25\",\r\n    \"reason\": \"General checkup\",\r\n    \"patient\": { \"id\": \"67a5cd60-693b-4510-8f8d-f575026ff788\" },\r\n    \"doctor\": { \"id\": \"df701fd1-98d1-4515-8358-30e4b5763e1e\" }\r\n  }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/appointments/b4af11a4-821a-45b7-bb84-71351b772168/reschedule?newDate=2020-10-28",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "appointments",
+            "b4af11a4-821a-45b7-bb84-71351b772168",
+            "reschedule"
+          ],
+          "query": [
+            {
+              "key": "newDate",
+              "value": "2020-10-28",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C1: Write a Prescription (Success)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/prescriptions/save?appointmentId=6012214e-a600-44b7-aa67-b2c63ffbbf17",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "prescriptions",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "appointmentId",
+              "value": "6012214e-a600-44b7-aa67-b2c63ffbbf17",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C1: Write a Prescription (Error)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/prescriptions/save?appointmentId=b4af11a4-821a-45b7-bb84-71351b772168",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "prescriptions",
+            "save"
+          ],
+          "query": [
+            {
+              "key": "appointmentId",
+              "value": "b4af11a4-821a-45b7-bb84-71351b772168",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C2: Prescriptions of an Appointment",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/prescriptions/appointment/6012214e-a600-44b7-aa67-b2c63ffbbf17",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "prescriptions",
+            "appointment",
+            "6012214e-a600-44b7-aa67-b2c63ffbbf17"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C3: Patient Prescription History by SSN",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/prescriptions/patient/123-45-6789",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "prescriptions",
+            "patient",
+            "123-45-6789"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "C4: Protect Appointment Deletion (Error)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/appointments/6012214e-a600-44b7-aa67-b2c63ffbbf17",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "appointments",
+            "6012214e-a600-44b7-aa67-b2c63ffbbf17"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D1: Doctor's Agenda for a Day",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/doctors/df701fd1-98d1-4515-8358-30e4b5763e1e/agenda?date=2026-10-20",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "doctors",
+            "df701fd1-98d1-4515-8358-30e4b5763e1e",
+            "agenda"
+          ],
+          "query": [
+            {
+              "key": "date",
+              "value": "2026-10-20",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2 Upcoming Appointments (Success)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/patients/123-45-6789/upcoming",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "patients",
+            "123-45-6789",
+            "upcoming"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D2 Upcoming Appointments (Error)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/patients/000-00-0000/upcoming",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "patients",
+            "000-00-0000",
+            "upcoming"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3: Search Doctors (Success)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/doctors/search?name=john",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "doctors",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "john",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "D3: Search Doctors (Empty Result)",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/doctors/search?name=xyz123",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "doctors",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "name",
+              "value": "xyz123",
+              "sortOrder": 0
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": " D4: Clinic Dashboard",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/dashboard/summary",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "dashboard",
+            "summary"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Bonus: Most Prescribed Medicines",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/prescriptions/stats/top-medicines",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "prescriptions",
+            "stats",
+            "top-medicines"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Bonus: Doctor Workload",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {}
+          }
+        }
+      ],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "inherit"
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"medicineName\": \"Amoxicillin\",\r\n  \"dosage\": \"1 tablet, 3 times a day\",\r\n  \"durationDays\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8082/api/doctors/workload?start=2026-10-01&end=2026-10-31",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8082",
+          "path": [
+            "api",
+            "doctors",
+            "workload"
+          ],
+          "query": [
+            {
+              "key": "start",
+              "value": "2026-10-01",
+              "sortOrder": 0
+            },
+            {
+              "key": "end",
+              "value": "2026-10-31",
+              "sortOrder": 1
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

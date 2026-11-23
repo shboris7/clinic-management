@@ -1,0 +1,54 @@
+.office-page {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+}
+
+.search-box {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
+
+.empty {
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+button {
+  padding: 5px 10px;
+  margin-right: 6px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+.btn-update {
+  background: #2d7ff9;
+}
+
+.btn-delete {
+  background: #d93025;
+}
